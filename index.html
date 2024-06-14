@@ -9,7 +9,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
             background-color: #f4f4f4;
             font-size: 18px; /* Increased base font size */
         }
@@ -17,12 +16,18 @@
             width: 60%; /* Narrower container */
             margin: auto;
             overflow: hidden;
+            text-align: left; /* Left-align text within the container */
         }
         header {
             background: #FF6C0C; /* Caltech Orange */
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
+            text-align: center; /* Center-align text in the header */
+        }
+        .separator {
+            background: #f4f4f4; /* Background color matching body */
+            height: 10px;
         }
         header a {
             color: #fff;
@@ -39,9 +44,7 @@
         }
         .bio-content {
             display: flex;
-            align-items: center;
-            justify-content: space-around;
-            text-align: left; /* Align text to the left */
+            align-items: flex-start; /* Align text with the top of the image */
         }
         img {
             border-radius: 10px;
@@ -58,6 +61,9 @@
         .publications a:hover {
             text-decoration: underline;
         }
+        .publications p {
+            margin-bottom: 10px; /* Space between publication entries */
+        }
     </style>
 </head>
 <body>
@@ -73,14 +79,20 @@
             <div class="bio-content">
                 <img src="foto_it.jpeg" alt="Your Photo">
                 <div>
-                    <p>I am a MSc at Pontificia Universidad Católica de Chile, where I worked with advisors Carlos Pérez Arancibia and Manuel A. Sánchez.</p>
-                    <p>I am interested in numerical analysis of partial differential equations.</p>
+                    <p>I am a MSc at Pontificia Universidad Católica de Chile, where I worked
+                       with advisors Carlos Pérez Arancibia and Manuel A. Sánchez.</p>
+                    <p>I am interested in numerical analysis of partial differential equations.
+                    </p>
                 </div>
             </div>
         </div>
         <div class="publications">
             <h2>Publications</h2>
-            <p><strong>Author Name</strong>, "<a href="https://example.com/publication-link" target="_blank">Title of the Publication</a>", <em>Journal Name</em>, Year.</p>
+            <p><strong>V. A. Hojas, C. Pérez Arancibia, M. A. Sánchez</strong>, 
+                "<a href="https://arxiv.org/abs/2306.13189" 
+               target="_blank">Reflectionless discrete perfectly matched layers 
+               for higher-order finite difference schemes</a>", 
+               <em>SIAM Journal on Scientific Computing (accepted)</em>, 2024.</p>
             <!-- Add more publications here -->
         </div>
         <div class="contact">
