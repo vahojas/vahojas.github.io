@@ -11,37 +11,52 @@
             padding: 0;
             text-align: center;
             background-color: #f4f4f4;
+            font-size: 18px; /* Increased base font size */
         }
         .container {
-            width: 80%;
+            width: 60%; /* Narrower container */
             margin: auto;
             overflow: hidden;
         }
         header {
-            background: #333;
+            background: #FF6C0C; /* Caltech Orange */
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
-            border-bottom: #0779e4 3px solid;
         }
         header a {
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 18px; /* Slightly larger font size */
         }
-        .bio, .contact {
+        .bio, .contact, .publications {
             background: #fff;
-            padding: 20px;
+            padding: 30px; /* Increased padding */
             margin-top: 20px;
+            border-radius: 10px; /* Added border radius for a modern look */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+        }
+        .bio-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-align: left; /* Align text to the left */
         }
         img {
-            border-radius: 5px;
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
             border-radius: 10px;
-            object-position: center top; /* Adjust the position to show the face properly */
+            width: 200px; /* Larger image size */
+            height: 200px;
+            object-fit: contain;
+            object-position: center top;
+            margin-right: 20px; /* Space between image and text */
+        }
+        .publications a {
+            color: #FF6C0C; /* Link color matching Caltech Orange */
+            text-decoration: none;
+        }
+        .publications a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -51,18 +66,22 @@
             <h1>Vicente Hojas</h1>
         </div>
     </header>
+    <div class="separator"></div>
     <div class="container">
         <div class="bio">
             <h2>About Me</h2>
-            <img src="foto_it.jpeg" alt="Your Photo">
-            <p>I am a MSc at Pontificia Universidad Católica de Chile, where I 
-                I worked with advisors Carlos Pérez Arancibia and Manuel A. 
-                Sánchez.
-            </p>
-            <p>
-                I am interested in numerical analysis of partial 
-                differential equations
-            </p>
+            <div class="bio-content">
+                <img src="foto_it.jpeg" alt="Your Photo">
+                <div>
+                    <p>I am a MSc at Pontificia Universidad Católica de Chile, where I worked with advisors Carlos Pérez Arancibia and Manuel A. Sánchez.</p>
+                    <p>I am interested in numerical analysis of partial differential equations.</p>
+                </div>
+            </div>
+        </div>
+        <div class="publications">
+            <h2>Publications</h2>
+            <p><strong>Author Name</strong>, "<a href="https://example.com/publication-link" target="_blank">Title of the Publication</a>", <em>Journal Name</em>, Year.</p>
+            <!-- Add more publications here -->
         </div>
         <div class="contact">
             <h2>Contact</h2>
