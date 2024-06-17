@@ -3,66 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graduate Student Webpage</title>
+    <title>Vicente Hojas Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            font-size: 18px; /* Increased base font size */
+            font-size: 18px;
         }
         .container {
-            width: 60%; /* Narrower container */
+            width: 90%; /* Use a higher percentage for smaller screens */
+            max-width: 800px; /* Set a maximum width for larger screens */
             margin: auto;
             overflow: hidden;
-            text-align: left; /* Left-align text within the container */
+            text-align: left;
         }
         header {
             background: #FF6C0C; /* Caltech Orange */
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
-            text-align: center; /* Center-align text in the header */
+            text-align: center;
         }
         .separator {
-            background: #f4f4f4; /* Background color matching body */
+            background: #f4f4f4;
             height: 10px;
         }
         header a {
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 18px; /* Slightly larger font size */
+            font-size: 18px;
         }
         .bio, .contact, .publications {
             background: #fff;
-            padding: 30px; /* Increased padding */
+            padding: 30px;
             margin-top: 20px;
-            border-radius: 10px; /* Added border radius for a modern look */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .bio-content {
             display: flex;
-            align-items: flex-start; /* Align text with the top of the image */
+            align-items: flex-start;
         }
         img {
             border-radius: 10px;
-            width: 200px; /* Larger image size */
+            width: 200px;
             height: 200px;
             object-fit: contain;
             object-position: center top;
-            margin-right: 20px; /* Space between image and text */
+            margin-right: 20px;
         }
         .publications a {
-            color: #FF6C0C; /* Link color matching Caltech Orange */
+            color: #FF6C0C;
             text-decoration: none;
         }
         .publications a:hover {
             text-decoration: underline;
         }
         .publications p {
-            margin-bottom: 10px; /* Space between publication entries */
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%; /* Full width on smaller screens */
+                padding: 0 10px; /* Add padding for smaller screens */
+            }
+            .bio-content {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                align-items: center; /* Center align the items on smaller screens */
+            }
+            img {
+                width: 100%; /* Full width image on smaller screens */
+                height: auto; /* Maintain aspect ratio */
+                margin-right: 0; /* Remove right margin on smaller screens */
+                margin-bottom: 20px; /* Add margin bottom for spacing */
+            }
         }
     </style>
 </head>
@@ -79,20 +96,14 @@
             <div class="bio-content">
                 <img src="foto_it.jpeg" alt="Your Photo">
                 <div>
-                    <p>I am a MSc at Pontificia Universidad Católica de Chile, where I worked
-                       with advisors Carlos Pérez Arancibia and Manuel A. Sánchez.</p>
-                    <p>I am interested in numerical analysis of partial differential equations.
-                    </p>
+                    <p>I am a MSc at Pontificia Universidad Católica de Chile, where I worked with advisors Carlos Pérez Arancibia and Manuel A. Sánchez.</p>
+                    <p>I am interested in numerical analysis of partial differential equations.</p>
                 </div>
             </div>
         </div>
         <div class="publications">
             <h2>Publications</h2>
-            <p><strong>V. A. Hojas, C. Pérez Arancibia, M. A. Sánchez</strong>, 
-                "<a href="https://arxiv.org/abs/2306.13189" 
-               target="_blank">Reflectionless discrete perfectly matched layers 
-               for higher-order finite difference schemes</a>", 
-               <em>SIAM Journal on Scientific Computing (accepted)</em>, 2024.</p>
+            <p><strong>V. A. Hojas, C. Pérez Arancibia, M. A. Sánchez</strong>, "<a href="https://arxiv.org/abs/2306.13189" target="_blank">Reflectionless discrete perfectly matched layers for higher-order finite difference schemes</a>", <em>SIAM Journal on Scientific Computing (accepted)</em>, 2024.</p>
             <!-- Add more publications here -->
         </div>
         <div class="contact">
