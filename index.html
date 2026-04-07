@@ -3,114 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vicente Hojas Webpage</title>
+    <title>Vicente Hojas</title>
     <style>
+        :root {
+            --primary: #003B4C;
+            --bg: #E0E2DB;
+            --panel: #FFFFFF;
+            --muted: #D2D4C8;
+            --text: #1F2A30;
+            --subtle: #5B6A70;
+            --link: #0A5C73;
+            --border: #C9CDC2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 18px;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
         }
+
         .container {
-            width: 90%; /* Use a higher percentage for smaller screens */
-            max-width: 800px; /* Set a maximum width for larger screens */
-            margin: auto;
-            overflow: hidden;
-            text-align: left;
+            width: min(92%, 920px);
+            margin: 0 auto;
         }
+
         header {
-            background: #FF6C0C; /* Caltech Orange */
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            text-align: center;
+            background: var(--primary);
+            color: #FFFFFF;
+            padding: 48px 0 36px 0;
         }
-        .separator {
-            background: #f4f4f4;
-            height: 10px;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 18px;
-        }
-        .bio, .contact, .publications {
-            background: #fff;
-            padding: 30px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .bio-content {
+
+        .header-inner {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            gap: 12px;
         }
-        img {
-            border-radius: 10px;
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            object-position: center top;
-            margin-right: 20px;
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            line-height: 1.1;
         }
-        .publications a {
-            color: #FF6C0C;
+
+        .subtitle {
+            margin: 0;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 8px;
+        }
+
+        .quick-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.98rem;
+        }
+
+        .quick-links a:hover {
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        main {
+            padding: 28px 0 40px 0;
+        }
+
+        section {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.45rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+
+        a {
+            color: var(--link);
             text-decoration: none;
         }
-        .publications a:hover {
+
+        a:hover {
             text-decoration: underline;
         }
-        .publications p {
-            margin-bottom: 10px;
+
+        .about-grid {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
         }
-        @media (max-width: 600px) {
-            .container {
-                width: 100%; /* Full width on smaller screens */
-                padding: 0 10px; /* Add padding for smaller screens */
+
+        .profile-photo {
+            width: 210px;
+            max-width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+            background: var(--muted);
+        }
+
+        .muted {
+            color: var(--subtle);
+        }
+
+        .research-list,
+        .publication-list,
+        .contact-list {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .publication-list li,
+        .research-list li,
+        .contact-list li {
+            margin-bottom: 12px;
+        }
+
+        .placeholder {
+            color: var(--subtle);
+            font-style: italic;
+        }
+
+        footer {
+            padding: 0 0 36px 0;
+            color: var(--subtle);
+            font-size: 0.96rem;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                font-size: 17px;
             }
-            .bio-content {
-                flex-direction: column; /* Stack items vertically on smaller screens */
-                align-items: center; /* Center align the items on smaller screens */
+
+            h1 {
+                font-size: 2rem;
             }
-            img {
-                width: 100%; /* Full width image on smaller screens */
-                height: auto; /* Maintain aspect ratio */
-                margin-right: 0; /* Remove right margin on smaller screens */
-                margin-bottom: 20px; /* Add margin bottom for spacing */
+
+            .about-grid {
+                flex-direction: column;
+            }
+
+            .profile-photo {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            section {
+                padding: 22px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-inner">
             <h1>Vicente Hojas</h1>
+            <p class="subtitle">
+                PhD Student in Applied and Computational Mathematics,
+                California Institute of Technology
+            </p>
+
+            <nav class="quick-links" aria-label="Quick links">
+                <a href="cv.pdf" target="_blank" rel="noopener noreferrer">
+                    CV
+                </a>
+                <a href="mailto:vhojas@caltech.edu">Email</a>
+                <a href="[PLACEHOLDER: Google Scholar URL]"
+                   target="_blank" rel="noopener noreferrer">
+                    Google Scholar
+                </a>
+                <a href="[PLACEHOLDER: GitHub URL]"
+                   target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+                <a href="[PLACEHOLDER: poster or slides PDF URL]"
+                   target="_blank" rel="noopener noreferrer">
+                    Poster / Slides
+                </a>
+            </nav>
         </div>
     </header>
-    <div class="separator"></div>
-    <div class="container">
-        <div class="bio">
-            <h2>About Me</h2>
-            <div class="bio-content">
-                <img src="foto_it.jpeg" alt="Your Photo">
-                <div>
-                    <p>I am a first year PhD student at Caltech in the Applied and Computational Mathematics (ACM) option, working with Professor Oscar Bruno. My research interests lie in numerical methods for scientific computing.</p>
-                    <p>Before joining Caltech, I completed my MSc at Pontificia Universidad Católica de Chile, where I worked with Carlos Pérez-Arancibia and Manuel A. Sánchez on Perfectly Matched Layers (PMLs) for higher-order finite difference schemes.</p>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>About</h2>
+                <div class="about-grid">
+                    <img
+                        src="foto_it.jpeg"
+                        alt="Photo of Vicente Hojas"
+                        class="profile-photo"
+                    >
+                    <div>
+                        <p>
+                            I am a PhD student at Caltech in the Applied and
+                            Computational Mathematics option, working with
+                            Professor Oscar Bruno.
+                        </p>
+                        <p>
+                        My research focuses on wave propagation and boundary integral equation
+                        methods, with applications to scattering problems and target
+                        identification.
+                        </p>
+                        <p>
+                            Before joining Caltech, I completed my MSc at
+                            Pontificia Universidad Católica de Chile, where I
+                            worked with Carlos Pérez-Arancibia and Manuel A.
+                            Sánchez on Perfectly Matched Layers (PMLs) for
+                            higher-order finite difference schemes.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <h2>Current Research</h2>
+                <ul class="research-list">
+                    <li>
+                        Target identification via scattering poles, using
+                        time-domain measurements and spectral estimation
+                        methods (ESPIRA, Prony-type techniques).
+                    </li>
+                    <li>
+                        Scattering poles of periodic structures, with emphasis on
+                        two-dimensional gratings and their computation through
+                        boundary integral formulations.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Publications</h2>
+                <ul class="publication-list">
+                    <li>
+                        <strong>V. A. Hojas, C. Pérez-Arancibia,
+                        M. A. Sánchez</strong>,
+                        "<a href="https://doi.org/10.1137/23M1581558"
+                        target="_blank" rel="noopener noreferrer">
+                        Reflectionless discrete perfectly matched layers for
+                        higher-order finite difference schemes</a>,"
+                        <em>SIAM Journal on Scientific Computing</em>
+                        <strong>46</strong>(5), A3094-A3123, 2024.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:vhojas@caltech.edu">
+                        vhojas@caltech.edu</a></li>
+                    <li>
+                        CV:
+                        <a href="cv.pdf" target="_blank"
+                        rel="noopener noreferrer">cv.pdf</a>
+                    </li>
+                </ul>
+            </section>
         </div>
-        <div class="publications">
-            <h2>Publications</h2>
-            <p><strong>V. A. Hojas, C. Pérez-Arancibia, M. A. Sánchez</strong>, "<a href="https://doi.org/10.1137/23M1581558" target="_blank">Reflectionless discrete perfectly matched layers for higher-order finite difference schemes</a>", <em>SIAM Journal on Scientific Computing</em> <strong>46</strong>(5), A3094-A3123, 2024.</p>
-            <!-- Add more publications here -->
-        </div>        
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>Email: vhojas@caltech.edu</p>
-            <p><a href="cv.pdf" download>Download CV</a></p>
+    </main>
+
+    <footer>
+        <div class="container">
+            Last updated: April 2026
         </div>
-    </div>
+    </footer>
 </body>
 </html>
